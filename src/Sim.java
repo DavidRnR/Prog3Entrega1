@@ -17,7 +17,7 @@ public class Sim {
 
 		//System.out.println(lista.toString());
 
-		Pila pila = new Pila(lista);
+		Pila pila = new Pila(lista); //También puedo crear una Pila desde una Lista o una vacía new Pila() y luego agregar elementos
 
 		//Pila está vacía?  true/false
 		System.out.println("Pila vacia? " + pila.isEmpty());
@@ -67,14 +67,13 @@ public class Sim {
 		pila.pop();		
 	
 		//Imprimo el tamaño y luego la pila
-		System.out.println(pila.getSize());
-		System.out.println(pila.toString());	//Está vacía
+		System.out.println("Size: "+pila.getSize());
+		System.out.println("Pila: "+pila.toString());	//Está vacía
+		System.out.println("Pila vacia? " + pila.isEmpty());
 		
 		//Intento retirar un elemento cuando la pila está vacía.
 		pila.pop();
-		pila.pop();
-		pila.pop();
-		pila.pop();
+	
 		
 		
 	}

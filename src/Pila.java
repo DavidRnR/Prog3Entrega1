@@ -22,7 +22,6 @@ public class Pila {
 		//Sino está vacía 
 		if (!pila.isEmpty()) {
 			int resp = pila.getValueNodo(pila.getSize()-1);
-			System.out.println(resp);
 			pila.delete(pila.getSize()-1);
 			return resp;
 		}

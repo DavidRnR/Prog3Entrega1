@@ -98,6 +98,7 @@ public class Lista {
 		//Cuando solo tiene un elemento
 		if(pos == 0) {
 			primero = null;
+			cantidad--;
 		}
 		
 		String s = "";
