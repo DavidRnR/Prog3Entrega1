@@ -31,6 +31,19 @@ public class Pila {
 	}
 
 	/**
+	 * Devuelve el primer elemento de la pila
+	 * @return
+	 */
+	public int top () {
+		//Sino está vacía 
+		if (!pila.isEmpty()) {
+			int resp = pila.getValueNodo(pila.getSize()-1);
+			return resp;
+		}
+		//Retorna -1 sino encuentra
+		return -1;
+	}
+	/**
 	 * Agrega un elemento al tope de la pila
 	 */
 	public void push(int n) {
