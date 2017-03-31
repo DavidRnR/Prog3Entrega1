@@ -4,20 +4,15 @@ public class Sim {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Lista lista = new Lista();
 
-		lista.addNodo(5);
-		lista.addNodo(6);
-		lista.addNodo(8);
-		lista.addNodo(12);
-		lista.addNodo(21);
-		lista.addNodo(12);
-		lista.addNodo(56);
-		lista.addNodo(54);
-
-		//System.out.println(lista.toString());
-
-		Pila pila = new Pila(lista); //También puedo crear una Pila desde una Lista o una vacía new Pila() y luego agregar elementos
+		//Creo una Pila
+		Pila pila = new Pila();
+		
+		pila.push(3);
+		pila.push(5);
+		pila.push(6);
+		pila.push(9);
+		pila.push(10);
 
 		//Pila está vacía?  true/false
 		System.out.println("Pila vacia? " + pila.isEmpty());
@@ -48,33 +43,33 @@ public class Sim {
 		System.out.println("**********************************************************");
 		System.out.println("Pila Top: "+pila.top());
 
-		//Elimino 4 elementos
+		//Elimino 5 elementos
 		System.out.println("Eliminados (Pop)");
 		pila.pop();
 		pila.pop();
 		pila.pop();
 		pila.pop();
+		pila.pop();
 
 		//Imprimo el tamaño y luego la pila
-		System.out.println("****************Tamaño y Pila ***********************");
-		System.out.println(pila.getSize());
-		System.out.println(pila.toString());
+		System.out.println("**********************************************");
+		System.out.println("Tamaño:"+pila.getSize()); //Está vacía
+		System.out.println("Pila:"+pila.toString()); //Está vacía
+		
+		pila.pop(); //Intento retirar un elemento cuando la pila está vacía.
 
-		//Elimino 4 elementos
-		pila.pop();
-		pila.pop();
-		pila.pop();
-		pila.pop();		
+		//Agrego 3 elementos
+	
+		pila.push(23);
+		pila.push(34);
+		pila.push(87);		
 	
 		//Imprimo el tamaño y luego la pila
+		System.out.println("**********************************************************");
 		System.out.println("Size: "+pila.getSize());
-		System.out.println("Pila: "+pila.toString());	//Está vacía
+		System.out.println("Pila: "+pila.toString());	
 		System.out.println("Pila vacia? " + pila.isEmpty());
-		
-		//Intento retirar un elemento cuando la pila está vacía.
-		pila.pop();
-	
-		
+			
 		
 	}
 

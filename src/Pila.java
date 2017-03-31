@@ -8,11 +8,6 @@ public class Pila {
 		pila = new Lista();
 	}
 
-	//Recibe una Lista 
-	public Pila (Lista li) {
-		pila = li;
-	}
-
 	/**
 	 * Devuelve el primer elemento y lo elimina de la pila
 	 * @return
@@ -21,8 +16,8 @@ public class Pila {
 
 		//Sino está vacía 
 		if (!pila.isEmpty()) {
-			int resp = pila.getValueNodo(pila.getSize()-1);
-			pila.delete(pila.getSize()-1);
+			int resp = pila.getValueNodo(0);
+			pila.delete(0);
 			return resp;
 		}
 		//Retorna -1 sino encuentra
@@ -36,7 +31,7 @@ public class Pila {
 	public int top () {
 		//Sino está vacía 
 		if (!pila.isEmpty()) {
-			int resp = pila.getValueNodo(pila.getSize()-1);
+			int resp = pila.getValueNodo(0);
 			return resp;
 		}
 		//Retorna -1 sino encuentra
@@ -46,7 +41,7 @@ public class Pila {
 	 * Agrega un elemento al tope de la pila
 	 */
 	public void push(int n) {
-		pila.addNodoEnd(n);
+		pila.addNodo(n);
 	}
 
 	/**

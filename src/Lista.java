@@ -97,14 +97,13 @@ public class Lista {
 		
 		//Cuando solo tiene un elemento
 		if(pos == 0) {
-			primero = null;
+			primero = primero.getSig();
 			cantidad--;
-		}
-		
-		String s = "";
+		}		
+
 		Nodo nodoActual = primero;
 		
-		while(nodoActual != null){
+		while(nodoActual != null && pos > 0){
 			if (pos == 1) {
 				Nodo temp = nodoActual.getSig();
 				nodoActual.setSig(temp.getSig());
